@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vedant's 3D Portfolio | Web Developer & Designer</title>
+    <title>Vedant's 3D Portfolio | Web Developer & Designer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -256,52 +256,62 @@
             transition: width 1.5s ease;
         }
 
-        /* Specific Section Styles */
+        /* Qualifications Section */
+        #qualifications { 
+            background: linear-gradient(135deg, #a8dadc, #457b9d);
+        }
+
+        .certificate-card {
+            max-width: 400px;
+            padding: 1.5rem;
+        }
+
+        .certificate-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+            border: 2px solid var(--light);
+        }
+
+        .certificate-card:hover .certificate-img {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .certificate-card h3 {
+            font-size: 1.3rem;
+            margin: 0.5rem 0;
+        }
+
+        .certificate-card p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        /* Specific Section Backgrounds */
         #home { 
             background: linear-gradient(135deg, #ffe66d, #f7d794);
             justify-content: center;
-        }
-
-        #home::before {
-            top: -100px;
-            right: -100px;
         }
 
         #skills { 
             background: linear-gradient(135deg, #95e1d3, #d8f3dc);
         }
 
-        #skills::before {
-            bottom: -100px;
-            left: -100px;
-        }
-
         #projects { 
             background: linear-gradient(135deg, #f7d794, #ffe66d);
-        }
-
-        #projects::before {
-            top: -100px;
-            left: -100px;
         }
 
         #blog { 
             background: linear-gradient(135deg, #4ecdc4, #95e1d3);
         }
 
-        #blog::before {
-            bottom: -100px;
-            right: -100px;
-        }
-
         #contact { 
             background: linear-gradient(135deg, #ff6b6b, #f7d794);
-        }
-
-        #contact::before {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
 
         /* Social Links */
@@ -331,7 +341,7 @@
             background: var(--primary);
         }
 
-        /* Animation */
+        /* Animations */
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
             40% { transform: translateY(-20px); }
@@ -348,7 +358,7 @@
             animation: float 6s ease-in-out infinite;
         }
 
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2.5rem;
@@ -366,6 +376,10 @@
                 width: 100%;
                 max-width: 350px;
             }
+            
+            .certificate-img {
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -374,6 +388,7 @@
         <ul>
             <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
             <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+            <li><a href="#qualifications"><i class="fas fa-graduation-cap"></i> Qualifications</a></li>
             <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
             <li><a href="#blog"><i class="fas fa-blog"></i> Blog</a></li>
             <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
@@ -382,10 +397,10 @@
 
     <!-- Home Section -->
     <section id="home">
-        <img src="WhatsApp Image 2025-03-13 at 10.41.55 PM.jpeg" alt="Alex Johnson" class="profile-pic floating">
+        <img src="WhatsApp Image 2025-03-13 at 10.41.55 PM.jpeg" alt="Vedant Nila" class="profile-pic floating">
         <h1>Vedant Nila</h1>
         <h2>Web Developer & UI/UX Designer</h2>
-        <p>ENTC student passionate about creating interactive, user-friendly web experiences with a touch of 3D magic. Currently pursuing my Bachelor's degree </p>
+        <p>ENTC student passionate about creating interactive, user-friendly web experiences with a touch of 3D magic. Currently pursuing my Bachelor's degree</p>
         <div>
             <a href="#projects" class="btn"><i class="fas fa-laptop-code"></i> View My Work</a>
             <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Hire Me</a>
@@ -431,7 +446,35 @@
                 <div class="skill-meter">
                     <div class="skill-level" style="width: 85%"></div>
                 </div>
-                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications Section -->
+    <section id="qualifications">
+        <h2>My Qualifications</h2>
+        <p>Academic achievements and professional certifications that validate my expertise:</p>
+        
+        <div class="container">
+            <div class="card certificate-card">
+                <img src="certificate1.jpg" alt="Web Development Certificate" class="certificate-img">
+                <h3>Certified Web Developer</h3>
+                <p>Issued by: FreeCodeCamp<br>Date: March 2024</p>
+                <a href="certificate1.jpg" class="btn" target="_blank"><i class="fas fa-download"></i> View Certificate</a>
+            </div>
+
+            <div class="card certificate-card">
+                <img src="certificate2.jpg" alt="UI/UX Design Certificate" class="certificate-img">
+                <h3>UI/UX Design Specialization</h3>
+                <p>Issued by: Coursera<br>Date: January 2024</p>
+                <a href="certificate2.jpg" class="btn" target="_blank"><i class="fas fa-download"></i> View Certificate</a>
+            </div>
+
+            <div class="card certificate-card">
+                <img src="certificate3.jpg" alt="JavaScript Certification" class="certificate-img">
+                <h3>JavaScript Algorithms Certification</h3>
+                <p>Issued by: Codecademy<br>Date: December 2023</p>
+                <a href="certificate3.jpg" class="btn" target="_blank"><i class="fas fa-download"></i> View Certificate</a>
             </div>
         </div>
     </section>
@@ -444,76 +487,25 @@
         <div class="container">
             <div class="card">
                 <div class="icon"><i class="fas fa-shopping-cart"></i></div>
-                <h3>Online complaint regstration </h3>
-                <p>While travelling in new city or an unknown place you can register online police complaint by visting site</p>
-                <div class="skill-meter">
-                    <div class="skill-level" style="width: 100%"></div>
-                </div>
-                <a href="https://bus-stand-complaint.vercel.app/" class="btn"><i class="https://bus-stand-complaint.vercel.app/"></i> Live Demo</a>
+                <h3>Online Complaint Registration</h3>
+                <p>While traveling in new city or an unknown place you can register online police complaint by visiting site</p>
+                <a href="https://bus-stand-complaint.vercel.app/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
             </div>
             
             <div class="card">
                 <div class="icon"><i class="fas fa-gamepad"></i></div>
                 <h3>Mobile Network Jammer</h3>
                 <p>Purpose: Used to disrupt communication (often in exams, meetings, or by criminals).</p>
-                <div class="skill-meter">
-                    <div class="skill-level" style="width: 100%"></div>
-                </div>
-                <a href="https://www.electronicshub.org/mobile-jammer-circuit/" class="btn"><i class="fas fa-external-link-alt"></i> Play Now</a>
+                <a href="https://www.electronicshub.org/mobile-jammer-circuit/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
             </div>
             
             <div class="card">
                 <div class="icon"><i class="fas fa-mobile-alt"></i></div>
-                <h3>LED cricket stump with buzzer</h3>
-                <p>Making LED cricket stumps at home is a fun DIY project that can enhance your cricket experience, especially for night games.</p>
-                <div class="skill-meter">
-                    <div class="skill-level" style="width: 100%"></div>
-                </div>
-                <a href="https://makingcircuits.com/blog/how-to-make-a-led-cricket-stump-circuit-at-home/" class="btn"><i class="https://makingcircuits.com/blog/how-to-make-a-led-cricket-stump-circuit-at-home/"></i> View Project</a>
+                <h3>LED Cricket Stump with Buzzer</h3>
+                <p>Making LED cricket stumps at home is a fun DIY project that can enhance your cricket experience.</p>
+                <a href="https://makingcircuits.com/blog/how-to-make-a-led-cricket-stump-circuit-at-home/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> View Project</a>
             </div>
         </div>
-        
-        <a href="#" class="btn" style="margin-top: 3rem;"><i class="fas fa-archive"></i> View All Projects</a>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog">
-        <h2>Latest Articles</h2>
-        <p>I share my learning journey, tutorials, and thoughts on web development and design:</p>
-        
-        <div class="container">
-            <div class="card">
-                <div class="icon"><i class="fas fa-cube"></i></div>
-                <h3>Mastering 3D CSS</h3>
-                <p>A deep dive into transform-style, perspective, and creating depth in web design</p>
-                <div class="skill-meter">
-                    <div class="skill-level" style="width: 100%"></div>
-                </div>
-                <a href="#" class="btn"><i class="fas fa-book-open"></i> Read Article</a>
-            </div>
-            
-            <div class="card">
-                <div class="icon"><i class="fas fa-graduation-cap"></i></div>
-                <h3>Student to Developer</h3>
-                <p>How I landed my first freelance gig while still in university</p>
-                <div class="skill-meter">
-                    <div class="skill-level" style="width: 100%"></div>
-                </div>
-                <a href="#" class="btn"><i class="fas fa-book-open"></i> Read Article</a>
-            </div>
-            
-            <div class="card">
-                <div class="icon"><i class="fas fa-lightbulb"></i></div>
-                <h3>HTML for Beginners</h3>
-                <p>Essential HTML principles every developer should know</p>
-                <div class="skill-meter">
-                    <div class="skill-level" style="width: 100%"></div>
-                </div>
-                <a href="#" class="btn"><i class="fas fa-book-open"></i> Read Article</a>
-            </div>
-        </div>
-        
-        <a href="#" class="btn" style="margin-top: 3rem;"><i class="fas fa-newspaper"></i> Visit My Blog</a>
     </section>
 
     <!-- Contact Section -->
@@ -529,13 +521,13 @@
                 <div style="text-align: left; margin: 2rem 0;">
                     <p><i class="fas fa-envelope" style="color: var(--primary); margin-right: 10px;"></i> vedantnila99@gmail.com</p>
                     <p><i class="fas fa-phone" style="color: var(--primary); margin-right: 10px;"></i> (123) 456-7890</p>
-                    <p><i class="fas fa-map-marker-alt" style="color: var(--primary); margin-right: 10px;"></i> Alandi,Pune</p>
+                    <p><i class="fas fa-map-marker-alt" style="color: var(--primary); margin-right: 10px;"></i> Alandi, Pune</p>
                 </div>
                 
                 <form style="display: flex; flex-direction: column; gap: 1rem;">
-                    <input type="text" placeholder="Your Name" style="padding: 1rem; border-radius: 10px; border: 1px solid #ddd;">
-                    <input type="email" placeholder="Your Email" style="padding: 1rem; border-radius: 10px; border: 1px solid #ddd;">
-                    <textarea placeholder="Your Message" rows="4" style="padding: 1rem; border-radius: 10px; border: 1px solid #ddd;"></textarea>
+                    <input type="text" placeholder="Your Name" required style="padding: 1rem; border-radius: 10px; border: 1px solid #ddd;">
+                    <input type="email" placeholder="Your Email" required style="padding: 1rem; border-radius: 10px; border: 1px solid #ddd;">
+                    <textarea placeholder="Your Message" rows="4" required style="padding: 1rem; border-radius: 10px; border: 1px solid #ddd;"></textarea>
                     <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
                 </form>
             </div>
@@ -546,7 +538,6 @@
             <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
             <a href="https://www.instagram.com/vedantnila47?igsh=MWkwdGdrczFybGpkbQ==" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
         </div>
     </section>
 
